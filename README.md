@@ -40,3 +40,6 @@ Disclosure
     Reported by: KJ Morrison (Independent Security Researcher)
 
 
+<img width="1409" height="566" alt="Screenshot 2025-07-24 at 2 35 10 PM" src="https://github.com/user-attachments/assets/60b2903b-6944-4a0e-806b-7fc438639b7a" />
+<img width="492" height="210" alt="image" src="https://github.com/user-attachments/assets/1152005f-7d27-4339-bf59-acd183c67989" />
+
